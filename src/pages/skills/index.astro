@@ -1,0 +1,45 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Tool from "../../components/Tool.astro";
+
+interface Tool {
+  src: string;
+  id: string;
+}
+
+const tools: Tool[] = [
+  { src: "/tools/js.svg", id: "js" },
+  { src: "/tools/react.svg", id: "react" },
+  { src: "/tools/nextjs.svg", id: "nextjs" },
+  { src: "/tools/nodejs.svg", id: "nodejs" },
+  { src: "/tools/mongodb.svg", id: "mongodb" },
+  { src: "/tools/astro.svg", id: "astro" },
+  { src: "/tools/github.svg", id: "github" },
+  { src: "/tools/python.svg", id: "python" },
+  { src: "/tools/css.svg", id: "css" },
+  { src: "/tools/html.svg", id: "html" }
+];
+---
+
+<Layout title="Skills">
+  <Navbar />
+  <div class="mt-24 md:ml-24 md:mr-24 2xl:ml-96 2xl:mr-96">
+    <h1 class="mb-4 mt-10 text-center text-4xl font-bold">Linguaggi, strumenti e software</h1>
+    <p class="mb-14 ml-3 mr-3 text-center">
+     Ogni giorno cerco di imparare qualcosa di nuovo per ampliare le mie competenze e attualmente <br /> ci riesco
+        sono riuscito a conoscere tanti strumenti, più o meno approfonditi.
+    </p>
+    <div class="grid grid-cols-2 place-items-center gap-4 md:grid-cols-5">
+      {
+        tools.map((y) => {
+          return <Tool src={y.src} id={y.id} />;
+        })
+      }
+    </div>
+
+    <footer class="mt-5 text-center">
+      The icons used are from <a href="https://skillicons.dev/">Skill Icons</a>
+    </footer>
+  </div>
+</Layout>

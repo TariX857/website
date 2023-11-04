@@ -1,0 +1,98 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import { Icon } from "astro-icon";
+---
+
+<Layout title="Tarik">
+  <Navbar />
+
+  <div class="mb-8 mt-28 text-center md:flex md:text-left">
+    <div class="md:flex md:w-1/2 md:items-center md:justify-center">
+      <div>
+        <h1 class="text-5xl font-bold">
+          Ciao, sono <span class="underline">Tarik</span>
+        </h1>
+        <p class="mt-2 text-lg text-gray-500 dark:text-gray-400">Sono un developer e gamer italiano</p>
+
+        <div class="mt-4 flex justify-center md:justify-start">
+          <a href="#about">
+            <button
+              class="mr-3 rounded-md bg-gorange p-2 pl-7 pr-7 font-semibold hover:underline dark:text-text"
+            >
+              Chi sono?
+            </button>
+          </a>
+          <a href="/skills">
+            <button
+              class="rounded-md bg-ggreen p-2 pl-7 pr-7 font-semibold hover:underline dark:text-text"
+            >
+              Cosa so fare?
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hidden md:flex md:w-1/2 md:items-center md:justify-center">
+      <img src="/favicon.ico" class="h-60 w-60 rounded-full border-8 border-gyellow" />
+    </div>
+  </div>
+
+  <div id="about" class="m-5 rounded-md p-4 md:ml-24 md:mr-24 2xl:ml-96 2xl:mr-96">
+    <h1 class="text-4xl font-bold">Su di me!</h1>
+    <p class="mt-3 text-lg">
+      Ciao, mi chiamo Tarik e sono un quattordicenne appassionato di computer. Mi sono appassionato
+      informatica da circa 2 anni. Tutto è iniziato quando ho provato per la prima volta a creare un bot per
+      la piattaforma di messaggistica Discord ed è stato amore a prima vista. Da quel giorno, sto
+      imparando costantemente cose nuove: nuovi linguaggi di programmazione, nuove abitudini e nuovi obiettivi.
+    </p>
+
+    <p class="mt-3 text-lg">
+     Gioco a Fornite e Minecraft in live su twitch, a volte anche a giochi proposti da voi. Perciò seguimi su twitch e attiva le notifiche così ogni volta possiamo farci compagnia a vicenda;
+     tanto non ci guadagno, nulla solamente compagnia.
+    </p>
+
+    <p class="mt-3 text-lg">
+      Sono appasionato dei motori a scoppio e sto cercando di capire cosa fare del resto della mia vita. Sono indeciso tra informatica o meccanica, però penso che approfondirò enterambi nel corso nella mia vita 
+      sperando di raggiungere i sogni di quel bambino di molti anni fa.
+    </p>
+
+    <div class="inline-flex items-baseline">
+      <h1 class="mt-2 text-gray-600 dark:text-gray-400">Domande o dubbi? Scrivimi -></h1>
+      <a href="mailto:tariksupp0rt@gmail.com" class="ml-1 text-gray-600 underline dark:text-gray-400"
+        >tariksupp0rt@gmail.com</a
+      >
+    </div>
+  </div>
+  <footer id="links">
+    <div class="mb-4 mt-4 hidden md:flex md:justify-center">
+      <span class="ml-1 mr-1 text-gray-500"></span>
+      <a class="flex cursor-pointer items-center hover:underline" href="https://linktr.ee/ghostylinks"
+        ><Icon name="mdi:tree" class="mr-1 h-6 w-6" /> Linktree</a
+      >
+    </div>
+
+    <div class="mb-4 mt-4 flex justify-center md:hidden">
+      <a
+        class="flex cursor-pointer items-center hover:underline"
+        href="https://github.com/vclemenzi"
+      >
+        <Icon name="mdi:github" class="mr-2 h-10 w-10" />
+      </a>
+      <a class="flex cursor-pointer items-center hover:underline" href="https://t.me/vclemenzi"
+        ><Icon name="ic:outline-telegram" class="mr-2 h-10 w-10" />
+      </a>
+      <span class="ml-1 mr-1 cursor-pointer text-gray-500"></span>
+      <a
+        class="flex cursor-pointer items-center hover:underline"
+        href="https://matrix.to/#/@thebigbot:matrix.org"
+        ><Icon name="simple-icons:matrix" class="mr-2 h-9 w-9" />
+      </a>
+      <span class="ml-1 mr-1 text-gray-500"></span>
+      <a class="flex cursor-pointer items-center hover:underline" href="mailto:inbox@vclemenzi.dev"
+        ><Icon name="majesticons:mail-line" class="mr-2 h-9 w-9" /></a
+      >
+    </div>
+  </footer>
+</Layout>
